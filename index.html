@@ -646,7 +646,7 @@
     texto += `\nContacto: ${contacto}`;
 
     const url = `https://wa.me/34672617360?text=${encodeURIComponent(texto)}`;
-    window.location.href = url;
+    window.open(url, '_blank');
   }
   // Animación scroll
   const obs = new IntersectionObserver(entries => {
