@@ -227,26 +227,26 @@
         <div class="megamenu-col">
           <h4>Por Categoría</h4>
           <ul>
-            <li><a href="#productos">Cuidado del Cabello</a></li>
-            <li><a href="#productos">Cuidado Corporal</a></li>
-            <li><a href="#productos" class="ver-todo">Ver todo →</a></li>
+            <li><a href="#productos" onclick="filtrar('categoria','cuidado-cabello','Cuidado del Cabello')">Cuidado del Cabello</a></li>
+            <li><a href="#productos" onclick="filtrar('categoria','cuidado-corporal','Cuidado Corporal')">Cuidado Corporal</a></li>
+            <li><a href="#productos" onclick="filtrar('todos','','Todos los productos')">Ver todo →</a></li>
           </ul>
         </div>
         <div class="megamenu-col">
           <h4>Por Necesidad</h4>
           <ul>
-            <li><a href="#productos">Control del Frizz</a></li>
-            <li><a href="#productos">Limpieza y Acondicionado</a></li>
-            <li><a href="#productos">Hidratación</a></li>
-            <li><a href="#productos" class="ver-todo">Ver todo →</a></li>
+            <li><a href="#productos" onclick="filtrar('necesidad','frizz','Control del Frizz')">Control del Frizz</a></li>
+            <li><a href="#productos" onclick="filtrar('necesidad','limpieza','Limpieza y Acondicionado')">Limpieza y Acondicionado</a></li>
+            <li><a href="#productos" onclick="filtrar('necesidad','hidratacion','Hidratación')">Hidratación</a></li>
+            <li><a href="#productos" onclick="filtrar('todos','','Todos los productos')">Ver todo →</a></li>
           </ul>
         </div>
         <div class="megamenu-col">
           <h4>Por Línea</h4>
           <ul>
-            <li><a href="#productos">Deserticola</a></li>
-            <li><a href="#productos">Suamel</a></li>
-            <li><a href="#productos" class="ver-todo">Ver todo →</a></li>
+            <li><a href="#productos" onclick="filtrar('linea','deserticola','Línea Deserticola')">Deserticola</a></li>
+            <li><a href="#productos" onclick="filtrar('linea','suamel','Línea Suamel')">Suamel</a></li>
+            <li><a href="#productos" onclick="filtrar('todos','','Todos los productos')">Ver todo →</a></li>
           </ul>
         </div>
       </div>
@@ -321,14 +321,14 @@
 <section class="productos" id="productos">
   <div class="productos-header">
     <div>
-      <span class="s-label">Catálogo completo</span>
+      <span class="s-label" id="filtro-label">Catálogo completo</span>
       <h2 class="s-titulo">Todos los <em>productos</em></h2>
     </div>
     <p style="font-size:.8rem;color:var(--mid);max-width:28ch;text-align:right;">Consulta disponibilidad y precios contactándonos directamente</p>
   </div>
-  <div class="productos-grid">
+  <div class="productos-grid" id="productos-grid">
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="limpieza hidratacion" data-linea="icd">
       <div class="card-img">
         <img src="prod_pack_flores.jpeg" alt="Moisture Cleansing Oil" loading="lazy">
         <span class="card-tag">Limpieza</span>
@@ -338,14 +338,13 @@
         <h3 class="card-nombre">Moisture Cleansing Oil</h3>
         <p class="card-desc">Aceite limpiador que disuelve maquillaje e impurezas sin resecar. Fórmula de enjuague suave.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
           <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="limpieza" data-linea="icd">
       <div class="card-img">
         <img src="prod_lineup.jpeg" alt="Cleansing Powder Wash" loading="lazy">
         <span class="card-tag">Limpieza</span>
@@ -355,14 +354,13 @@
         <h3 class="card-nombre">Cleansing Powder Wash</h3>
         <p class="card-desc">Polvo limpiador enzimático activado con el agua. Exfolia suavemente y elimina el exceso de sebo.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
           <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
       <div class="card-img">
         <img src="prod_oil_mist.jpeg" alt="Two Phase Oil Mist" loading="lazy">
         <span class="card-tag">Hidratación</span>
@@ -372,14 +370,13 @@
         <h3 class="card-nombre">Two Phase Oil Mist</h3>
         <p class="card-desc">Bruma bifásica de aceite y agua que hidrata y da luminosidad instantánea. Agitar antes de usar.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
           <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
       <div class="card-img">
         <img src="prod_calming_gel.jpeg" alt="Calming Balance Gel" loading="lazy">
         <span class="card-tag">Calmante</span>
@@ -389,14 +386,13 @@
         <h3 class="card-nombre">Calming Balance Gel</h3>
         <p class="card-desc">Gel calmante e hidratante que equilibra la microbiota cutánea. Ideal para pieles sensibles o reactivas.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
           <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
       <div class="card-img">
         <img src="prod_crema_flores.jpeg" alt="Dermatology Cream" loading="lazy">
         <span class="card-tag">Estrella</span>
@@ -406,14 +402,13 @@
         <h3 class="card-nombre">Dermatology Cream</h3>
         <p class="card-desc">Crema hidratante de barrera reparadora. Nutritiva y densa para pieles secas o deshidratadas.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
           <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
       <div class="card-img">
         <img src="prod_gama_completa.jpeg" alt="Dermatology Serum" loading="lazy">
         <span class="card-tag">Tratamiento</span>
@@ -423,14 +418,13 @@
         <h3 class="card-nombre">Dermatology Serum</h3>
         <p class="card-desc">Sérum concentrado de alta penetración. Actúa en las capas profundas para un efecto visible desde la primera semana.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
           <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
       <div class="card-img">
         <img src="prod_lineup.jpeg" alt="Dermatology Booster" loading="lazy">
         <span class="card-tag">Tratamiento</span>
@@ -447,7 +441,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-cabello" data-necesidad="hidratacion frizz" data-linea="deserticola">
       <div class="card-img">
         <img src="prod_multi_balm.jpeg" alt="Multi Stick Balm" loading="lazy">
         <span class="card-tag">Multiusos</span>
@@ -464,7 +458,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="suamel">
       <div class="card-img">
         <img src="prod_gama_completa.jpeg" alt="Moisture Layer Sun Protector" loading="lazy">
         <span class="card-tag">Solar</span>
@@ -481,7 +475,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="cuidado-cabello" data-necesidad="limpieza frizz" data-linea="deserticola">
       <div class="card-img">
         <img src="prod_sheer_bb.jpeg" alt="Sheer Glow BB" loading="lazy">
         <span class="card-tag">Color</span>
@@ -618,6 +612,19 @@
 </footer>
 
 <script>
+  function filtrar(tipo, valor, etiqueta) {
+    const cards = document.querySelectorAll('#productos-grid .card');
+    cards.forEach(card => {
+      if (tipo === 'todos') {
+        card.style.display = '';
+      } else {
+        const datos = card.dataset[tipo] || '';
+        card.style.display = datos.split(' ').includes(valor) ? '' : 'none';
+      }
+    });
+    document.getElementById('filtro-label').textContent = etiqueta;
+  }
+
   function irContacto() {
     document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
   }
