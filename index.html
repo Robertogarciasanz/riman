@@ -97,6 +97,29 @@
     .card-footer { display: flex; align-items: center; justify-content: space-between; }
     .btn-info { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .5rem 1rem; border: 2px solid var(--green); color: var(--green); background: transparent; cursor: pointer; transition: background .2s, color .2s; }
     .btn-info:hover { background: var(--green); color: var(--white); }
+    .btn-comprar { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .5rem 1rem; border: 2px solid var(--red); color: var(--white); background: var(--red); cursor: pointer; transition: background .2s; }
+    .btn-comprar:hover { background: #c73d32; border-color: #c73d32; }
+
+    /* MODAL PAGO */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1000; align-items: center; justify-content: center; }
+    .modal-overlay.active { display: flex; }
+    .modal { background: var(--white); width: 100%; max-width: 480px; padding: 2.5rem; position: relative; }
+    .modal-close { position: absolute; top: 1rem; right: 1.2rem; font-size: 1.4rem; cursor: pointer; color: var(--mid); background: none; border: none; line-height: 1; }
+    .modal-titulo { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: .3rem; }
+    .modal-precio { font-size: 1.4rem; font-weight: 700; color: var(--green); margin-bottom: 1.5rem; }
+    .modal .fg { display: flex; flex-direction: column; gap: .3rem; margin-bottom: 1rem; }
+    .modal .fg label { font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); }
+    .modal .fg input, .modal .fg select { border: 1px solid var(--border); padding: .7rem .9rem; font-family: var(--ff); font-size: .88rem; outline: none; transition: border-color .2s; color: var(--ink); background: var(--white); }
+    .modal .fg input:focus { border-color: var(--green); }
+    #card-element { border: 1px solid var(--border); padding: .75rem .9rem; margin-bottom: 1rem; }
+    #card-errors { color: var(--red); font-size: .78rem; margin-bottom: .8rem; min-height: 1.2em; }
+    .btn-pagar { width: 100%; background: var(--green); color: var(--white); border: none; padding: .9rem; font-family: var(--ff); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; transition: background .2s; }
+    .btn-pagar:hover { background: var(--green-dark); }
+    .btn-pagar:disabled { background: #aaa; cursor: not-allowed; }
+    .modal-ok { display: none; text-align: center; padding: 1rem 0; }
+    .modal-ok svg { margin-bottom: 1rem; }
+    .modal-ok p { font-size: .95rem; color: var(--ink); font-weight: 500; }
+    .stripe-badge { text-align: center; margin-top: 1rem; font-size: .68rem; color: var(--mid); }
 
     /* PACK */
     .pack { background: var(--green-pale); display: grid; grid-template-columns: 1fr 1fr; margin: 2rem 0; }
@@ -277,6 +300,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -293,6 +317,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -309,6 +334,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -325,6 +351,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -341,6 +368,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -357,6 +385,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -373,6 +402,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -389,6 +419,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -405,6 +436,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -421,6 +453,7 @@
         <div class="card-footer">
           <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
           <button class="btn-info" onclick="irContacto()">Pedir info</button>
+          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
         </div>
       </div>
     </article>
@@ -578,6 +611,142 @@
     el.style.opacity='0'; el.style.transform='translateY(20px)';
     el.style.transition='opacity .5s ease, transform .5s ease';
     obs.observe(el);
+  });
+</script>
+
+<!-- MODAL PAGO -->
+<div class="modal-overlay" id="modalPago">
+  <div class="modal">
+    <button class="modal-close" onclick="cerrarPago()">×</button>
+    <div id="modal-contenido">
+      <p class="modal-titulo" id="modal-nombre-producto"></p>
+      <p class="modal-precio" id="modal-precio-producto"></p>
+      <div class="fg">
+        <label>Nombre completo</label>
+        <input type="text" id="pay-nombre" placeholder="Tu nombre">
+      </div>
+      <div class="fg">
+        <label>Email</label>
+        <input type="email" id="pay-email" placeholder="tu@email.com">
+      </div>
+      <div class="fg">
+        <label>Datos de tarjeta</label>
+        <div id="card-element"></div>
+      </div>
+      <div id="card-errors"></div>
+      <button class="btn-pagar" id="btn-pagar" onclick="procesarPago()">Pagar ahora</button>
+      <p class="stripe-badge">🔒 Pago seguro con <strong>Stripe</strong> · Datos cifrados SSL</p>
+    </div>
+    <div class="modal-ok" id="modal-ok">
+      <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#3c544b"/><path d="M17 28l8 8 14-16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <p>¡Pago realizado con éxito!<br>Te enviaremos la confirmación por email.</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  /* ============================================================
+     STRIPE — Configuración
+     Reemplaza pk_test_... por tu clave pública real cuando
+     te des de alta en stripe.com
+  ============================================================ */
+  const STRIPE_PUBLIC_KEY = 'pk_test_51OExampleKeyReplaceMeWithYourRealStripePublishableKey00000000';
+
+  const PRECIOS = {
+    'Moisture Cleansing Oil':       { precio: 32, display: '32,00 €' },
+    'Cleansing Powder Wash':        { precio: 28, display: '28,00 €' },
+    'Two Phase Oil Mist':           { precio: 35, display: '35,00 €' },
+    'Calming Balance Gel':          { precio: 30, display: '30,00 €' },
+    'Dermatology Cream':            { precio: 45, display: '45,00 €' },
+    'Dermatology Serum':            { precio: 55, display: '55,00 €' },
+    'Dermatology Booster':          { precio: 48, display: '48,00 €' },
+    'Multi Stick Balm':             { precio: 18, display: '18,00 €' },
+    'Moisture Layer Sun Protector': { precio: 38, display: '38,00 €' },
+    'Sheer Glow BB':                { precio: 34, display: '34,00 €' },
+  };
+
+  let stripe, cardElement, productoActual;
+
+  function initStripe() {
+    if (stripe) return;
+    stripe = Stripe(STRIPE_PUBLIC_KEY);
+    const elements = stripe.elements({ locale: 'es' });
+    cardElement = elements.create('card', {
+      style: {
+        base: { fontFamily: 'Montserrat, sans-serif', fontSize: '15px', color: '#323232',
+                '::placeholder': { color: '#b0b0b0' } },
+        invalid: { color: '#ed4a3e' }
+      }
+    });
+    cardElement.mount('#card-element');
+    cardElement.on('change', e => {
+      document.getElementById('card-errors').textContent = e.error ? e.error.message : '';
+    });
+  }
+
+  function abrirPago(btn) {
+    const card = btn.closest('.card');
+    const nombre = card.querySelector('.card-nombre').textContent.trim();
+    const info   = PRECIOS[nombre] || { precio: 0, display: 'Consultar' };
+
+    productoActual = { nombre, ...info };
+    document.getElementById('modal-nombre-producto').textContent = nombre;
+    document.getElementById('modal-precio-producto').textContent = info.display;
+    document.getElementById('modal-ok').style.display = 'none';
+    document.getElementById('modal-contenido').style.display = 'block';
+    document.getElementById('card-errors').textContent = '';
+    document.getElementById('pay-nombre').value = '';
+    document.getElementById('pay-email').value = '';
+
+    document.getElementById('modalPago').classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // Inicializar Stripe al abrir por primera vez
+    setTimeout(initStripe, 50);
+  }
+
+  function cerrarPago() {
+    document.getElementById('modalPago').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  async function procesarPago() {
+    const nombre = document.getElementById('pay-nombre').value.trim();
+    const email  = document.getElementById('pay-email').value.trim();
+    const errDiv = document.getElementById('card-errors');
+    const btn    = document.getElementById('btn-pagar');
+
+    if (!nombre) { errDiv.textContent = 'Por favor, introduce tu nombre.'; return; }
+    if (!email || !email.includes('@')) { errDiv.textContent = 'Introduce un email válido.'; return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Procesando...';
+    errDiv.textContent = '';
+
+    /* En producción aquí llamarías a tu backend para crear un PaymentIntent.
+       Con claves de prueba mostramos el flujo completo simulado. */
+    const { paymentMethod, error } = await stripe.createPaymentMethod({
+      type: 'card',
+      card: cardElement,
+      billing_details: { name: nombre, email }
+    });
+
+    if (error) {
+      errDiv.textContent = error.message;
+      btn.disabled = false;
+      btn.textContent = 'Pagar ahora';
+    } else {
+      // Pago simulado exitoso (en producción confirmarías el PaymentIntent desde el servidor)
+      document.getElementById('modal-contenido').style.display = 'none';
+      document.getElementById('modal-ok').style.display = 'block';
+      setTimeout(cerrarPago, 4000);
+    }
+  }
+
+  // Cerrar modal al hacer clic fuera
+  document.getElementById('modalPago').addEventListener('click', function(e) {
+    if (e.target === this) cerrarPago();
   });
 </script>
 
