@@ -199,6 +199,17 @@
     @media (prefers-reduced-motion: reduce) {
       .marquee-inner { animation: none; }
     }
+
+    /* MEGAMENÚ */
+    .nav-links li { position: relative; }
+    .nav-links li:hover > .megamenu { display: flex; }
+    .megamenu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--border); border-top: 2px solid var(--green); box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 2rem; gap: 3rem; z-index: 200; min-width: 560px; }
+    .megamenu-col h4 { font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
+    .megamenu-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .megamenu-col ul li a { font-size: .82rem; font-weight: 400; color: var(--ink); text-decoration: none; transition: color .2s; white-space: nowrap; }
+    .megamenu-col ul li a:hover { color: var(--green); }
+    .megamenu-col ul li a.ver-todo { font-weight: 600; color: var(--green); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin-top: .4rem; display: block; }
+    @media (max-width: 960px) { .megamenu { display: none !important; } }
   </style>
 </head>
 <body>
@@ -210,7 +221,36 @@
 <nav>
   <a href="#" class="nav-logo">RIMAN</a>
   <ul class="nav-links">
-    <li><a href="#productos">Productos</a></li>
+    <li>
+      <a href="#productos">Productos ▾</a>
+      <div class="megamenu">
+        <div class="megamenu-col">
+          <h4>Por Categoría</h4>
+          <ul>
+            <li><a href="#productos">Cuidado del Cabello</a></li>
+            <li><a href="#productos">Cuidado Corporal</a></li>
+            <li><a href="#productos" class="ver-todo">Ver todo →</a></li>
+          </ul>
+        </div>
+        <div class="megamenu-col">
+          <h4>Por Necesidad</h4>
+          <ul>
+            <li><a href="#productos">Control del Frizz</a></li>
+            <li><a href="#productos">Limpieza y Acondicionado</a></li>
+            <li><a href="#productos">Hidratación</a></li>
+            <li><a href="#productos" class="ver-todo">Ver todo →</a></li>
+          </ul>
+        </div>
+        <div class="megamenu-col">
+          <h4>Por Línea</h4>
+          <ul>
+            <li><a href="#productos">Deserticola</a></li>
+            <li><a href="#productos">Suamel</a></li>
+            <li><a href="#productos" class="ver-todo">Ver todo →</a></li>
+          </ul>
+        </div>
+      </div>
+    </li>
     <li><a href="#ritual">Ritual</a></li>
     <li><a href="#pack">Pack</a></li>
     <li><a href="#contacto">Contacto</a></li>
