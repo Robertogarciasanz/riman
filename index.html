@@ -541,9 +541,24 @@
     document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
   }
   function enviar(btn) {
-    btn.textContent = '✓ Mensaje enviado';
-    btn.style.background = 'var(--sage-deep)';
-    setTimeout(() => { btn.textContent = 'Enviar consulta'; btn.style.background = ''; }, 3000);
+    const form = btn.closest('.ct-form');
+    const nombre   = form.querySelector('input[type="text"]').value.trim();
+    const contacto = form.querySelectorAll('input[type="text"]')[1].value.trim();
+    const producto = form.querySelector('select').value;
+    const mensaje  = form.querySelector('textarea').value.trim();
+
+    if (!nombre || !contacto) {
+      alert('Por favor, rellena tu nombre y datos de contacto.');
+      return;
+    }
+
+    let texto = `Hola, soy *${nombre}*.\n`;
+    if (producto) texto += `Estoy interesado/a en: *${producto}*.\n`;
+    if (mensaje)  texto += `\n${mensaje}\n`;
+    texto += `\nContacto: ${contacto}`;
+
+    const url = `https://wa.me/3467261736?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
   }
   // Animación scroll
   const obs = new IntersectionObserver(entries => {
