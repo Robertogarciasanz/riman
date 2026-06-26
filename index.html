@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RIMAN · Skincare Dermatológico · Salamanca</title>
-  <meta name="description" content="Skincare dermatológico de alta eficacia. Fórmulas desarrolladas para pieles exigentes. Disponible en Salamanca.">
+  <title>RIMAN · Skincare & Wellness · Salamanca</title>
+  <meta name="description" content="Catálogo completo RIMAN: ICD Dermatology, Botalab, Lifening. Disponible en Salamanca.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -20,474 +20,421 @@
       --ink:        #323232;
       --mid:        #606060;
       --border:     #d4dcd8;
-      --topbar:     #e9e9e9;
       --ff:         'Montserrat', sans-serif;
     }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--ink); font-family: var(--ff); font-weight: 400; line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
-    /* TOP BAR */
-    .top-bar { background: var(--topbar); color: var(--mid); font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-align: center; padding: .4rem 1rem; text-transform: uppercase; }
+    .top-bar { background: var(--green); color: rgba(255,255,255,0.85); font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-align: center; padding: .5rem 1rem; text-transform: uppercase; }
 
-    /* NAV */
-    nav { position: sticky; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 3rem; background: var(--white); border-bottom: 1px solid var(--border); }
+    nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1rem 3rem; background: var(--white); border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: .5rem; }
     .nav-logo { font-size: 1.5rem; font-weight: 700; letter-spacing: .22em; color: var(--green); text-decoration: none; }
-    .nav-links { display: flex; gap: 2.4rem; list-style: none; }
-    .nav-links a { font-size: .74rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); text-decoration: none; transition: color .2s; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); text-decoration: none; transition: color .2s; }
     .nav-links a:hover { color: var(--green); }
-    .nav-cta { font-size: .74rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .6rem 1.6rem; border: 2px solid var(--green); color: var(--white); background: var(--green); text-decoration: none; transition: background .2s, color .2s; }
-    .nav-cta:hover { background: var(--green-dark); border-color: var(--green-dark); }
+    .nav-cta { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .55rem 1.4rem; background: var(--green); color: var(--white); text-decoration: none; border: 2px solid var(--green); transition: background .2s; }
+    .nav-cta:hover { background: var(--green-dark); }
 
-    /* HERO */
-    .hero { min-height: calc(100vh - 96px); display: grid; grid-template-columns: 1fr 1fr; }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 90px); }
     .hero-texto { display: flex; flex-direction: column; justify-content: center; padding: 5rem 4rem 5rem 5rem; }
     .hero-eyebrow { font-size: .7rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--green); margin-bottom: 1.4rem; }
-    .hero-titulo { font-size: clamp(2.4rem, 4vw, 4rem); font-weight: 700; line-height: 1.12; color: var(--ink); margin-bottom: 1.4rem; }
+    .hero-titulo { font-size: clamp(2.2rem, 4vw, 3.8rem); font-weight: 700; line-height: 1.12; color: var(--ink); margin-bottom: 1.4rem; }
     .hero-titulo em { font-style: normal; color: var(--green); }
-    .hero-sub { font-size: .9rem; font-weight: 400; line-height: 1.8; color: var(--mid); max-width: 42ch; margin-bottom: 2.5rem; }
-    .btn-ppal { display: inline-block; background: var(--green); color: var(--white); padding: .9rem 2.4rem; font-family: var(--ff); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--green); cursor: pointer; transition: background .2s, border-color .2s; align-self: flex-start; }
-    .btn-ppal:hover { background: var(--green-dark); border-color: var(--green-dark); }
-    .hero-imagen { position: relative; overflow: hidden; }
+    .hero-sub { font-size: .9rem; line-height: 1.8; color: var(--mid); max-width: 42ch; margin-bottom: 2.5rem; }
+    .hero-imagen { overflow: hidden; position: relative; }
     .hero-imagen img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
-    .hero-badge { position: absolute; bottom: 2.5rem; left: 2.5rem; background: var(--white); padding: .8rem 1.2rem; font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green); border-left: 3px solid var(--green); }
+    .hero-badge { position: absolute; bottom: 2rem; left: 2rem; background: var(--white); padding: .7rem 1.1rem; font-size: .65rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green); border-left: 3px solid var(--green); }
 
-    /* MARQUEE */
-    .marquee { background: var(--green); color: var(--white); padding: .8rem 0; overflow: hidden; white-space: nowrap; }
-    .marquee-inner { display: inline-block; animation: marquee 28s linear infinite; font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+    .marquee { background: var(--green-pale); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: .7rem 0; overflow: hidden; white-space: nowrap; }
+    .marquee-inner { display: inline-block; animation: marquee 30s linear infinite; font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--green); }
     .marquee-inner span { margin: 0 2.4rem; }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
-    /* SECCIÓN LABEL */
     .s-label { font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--green); display: block; margin-bottom: .6rem; }
-    .s-titulo { font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 700; line-height: 1.18; color: var(--ink); }
+    .s-titulo { font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 700; line-height: 1.18; color: var(--ink); }
     .s-titulo em { font-style: normal; color: var(--green); }
 
-    /* FILOSOFÍA */
-    .filosofia { display: grid; grid-template-columns: 1fr 1fr; gap: 0; max-width: 1200px; margin: 6rem auto; padding: 0 3rem; }
-    .filosofia-texto { padding-right: 5rem; }
-    .filosofia-texto p { margin-top: 1.4rem; font-size: .9rem; line-height: 1.85; color: var(--mid); max-width: 46ch; }
-    .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-content: center; }
-    .stat { padding: 2rem; background: var(--white); border: 1px solid var(--border); }
-    .stat-n { font-size: 2.8rem; font-weight: 700; color: var(--green); line-height: 1; }
-    .stat-d { font-size: .7rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--mid); margin-top: .5rem; }
+    .btn-ppal { display: inline-block; background: var(--green); color: var(--white); padding: .85rem 2.2rem; font-family: var(--ff); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; border: 2px solid var(--green); cursor: pointer; transition: background .2s; }
+    .btn-ppal:hover { background: var(--green-dark); }
+    .btn-comprar { font-family: var(--ff); font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .5rem 1rem; border: 2px solid var(--red); color: var(--white); background: var(--red); cursor: pointer; transition: background .2s; }
+    .btn-comprar:hover { background: #c73d32; }
+    .btn-info { font-family: var(--ff); font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .5rem 1rem; border: 2px solid var(--green); color: var(--green); background: transparent; cursor: pointer; transition: background .2s, color .2s; }
+    .btn-info:hover { background: var(--green); color: var(--white); }
 
-    /* GALERÍA FOTOS */
-    .galeria { padding: 3rem; max-width: 1280px; margin: 0 auto; }
-    .galeria-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
-    .galeria-item { overflow: hidden; aspect-ratio: 4/3; }
-    .galeria-item.grande { grid-column: span 2; aspect-ratio: 16/9; }
-    .galeria-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-    .galeria-item:hover img { transform: scale(1.04); }
+    /* FILTROS */
+    .filtros { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .filtro-btn { font-family: var(--ff); font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .45rem 1.1rem; border: 1px solid var(--border); background: var(--white); color: var(--mid); cursor: pointer; transition: all .2s; }
+    .filtro-btn:hover, .filtro-btn.activo { background: var(--green); color: var(--white); border-color: var(--green); }
 
-    /* PRODUCTOS */
-    .productos { padding: 5rem 3rem; max-width: 1280px; margin: 0 auto; }
-    .productos-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
-    .productos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    /* SECCIÓN CATÁLOGO */
+    .catalogo-seccion { padding: 4rem 3rem; max-width: 1280px; margin: 0 auto; }
+    .catalogo-header { margin-bottom: 2rem; }
+    .productos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 1rem; }
 
     .card { background: var(--white); border: 1px solid var(--border); overflow: hidden; transition: transform .3s, box-shadow .3s; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(60,84,75,0.12); }
-    .card-img { aspect-ratio: 3/4; overflow: hidden; position: relative; background: var(--green-pale); }
-    .card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .5s ease; }
-    .card:hover .card-img img { transform: scale(1.06); }
-    .card-tag { position: absolute; top: .9rem; right: .9rem; font-size: .6rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: var(--white); color: var(--green); padding: .25rem .6rem; border: 1px solid var(--border); }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(60,84,75,0.1); }
+    .card-img { aspect-ratio: 3/4; overflow: hidden; position: relative; background: var(--green-pale); display: flex; align-items: center; justify-content: center; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .5s; position: absolute; inset: 0; }
+    .card:hover .card-img img { transform: scale(1.05); }
+    .card-placeholder { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+    .card-placeholder svg { opacity: .3; }
+    .card-placeholder span { font-size: .6rem; color: #b0bfba; letter-spacing: .1em; text-transform: uppercase; }
+    .card-tag { position: absolute; top: .9rem; right: .9rem; font-size: .6rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; background: var(--white); color: var(--green); padding: .25rem .6rem; border: 1px solid var(--border); z-index: 1; }
+    .card-linea { position: absolute; top: .9rem; left: .9rem; font-size: .58rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; background: var(--green); color: var(--white); padding: .2rem .55rem; z-index: 1; }
     .card-info { padding: 1.3rem 1.4rem; }
     .card-cat { font-size: .62rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--mid); margin-bottom: .4rem; }
-    .card-nombre { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; }
-    .card-desc { font-size: .8rem; font-weight: 400; color: var(--mid); line-height: 1.6; margin-bottom: 1rem; }
-    .card-footer { display: flex; align-items: center; justify-content: space-between; }
-    .btn-info { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .5rem 1rem; border: 2px solid var(--green); color: var(--green); background: transparent; cursor: pointer; transition: background .2s, color .2s; }
-    .btn-info:hover { background: var(--green); color: var(--white); }
-    .btn-comprar { font-size: .68rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: .5rem 1rem; border: 2px solid var(--red); color: var(--white); background: var(--red); cursor: pointer; transition: background .2s; }
-    .btn-comprar:hover { background: #c73d32; border-color: #c73d32; }
+    .card-nombre { font-size: .95rem; font-weight: 600; color: var(--ink); margin-bottom: .4rem; line-height: 1.3; }
+    .card-ingrediente { font-size: .72rem; color: var(--green); font-weight: 500; margin-bottom: .5rem; }
+    .card-desc { font-size: .78rem; color: var(--mid); line-height: 1.6; margin-bottom: 1rem; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+    .card-precio { font-size: 1.1rem; font-weight: 700; color: var(--green); }
 
-    /* MODAL PAGO */
-    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1000; align-items: center; justify-content: center; }
-    .modal-overlay.active { display: flex; }
-    .modal { background: var(--white); width: 100%; max-width: 480px; padding: 2.5rem; position: relative; }
-    .modal-close { position: absolute; top: 1rem; right: 1.2rem; font-size: 1.4rem; cursor: pointer; color: var(--mid); background: none; border: none; line-height: 1; }
-    .modal-titulo { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: .3rem; }
-    .modal-precio { font-size: 1.4rem; font-weight: 700; color: var(--green); margin-bottom: 1.5rem; }
-    .modal .fg { display: flex; flex-direction: column; gap: .3rem; margin-bottom: 1rem; }
-    .modal .fg label { font-size: .65rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--mid); }
-    .modal .fg input, .modal .fg select { border: 1px solid var(--border); padding: .7rem .9rem; font-family: var(--ff); font-size: .88rem; outline: none; transition: border-color .2s; color: var(--ink); background: var(--white); }
-    .modal .fg input:focus { border-color: var(--green); }
-    #card-element { border: 1px solid var(--border); padding: .75rem .9rem; margin-bottom: 1rem; }
-    #card-errors { color: var(--red); font-size: .78rem; margin-bottom: .8rem; min-height: 1.2em; }
-    .btn-pagar { width: 100%; background: var(--green); color: var(--white); border: none; padding: .9rem; font-family: var(--ff); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; transition: background .2s; }
-    .btn-pagar:hover { background: var(--green-dark); }
-    .btn-pagar:disabled { background: #aaa; cursor: not-allowed; }
-    .modal-ok { display: none; text-align: center; padding: 1rem 0; }
-    .modal-ok svg { margin-bottom: 1rem; }
-    .modal-ok p { font-size: .95rem; color: var(--ink); font-weight: 500; }
-    .stripe-badge { text-align: center; margin-top: 1rem; font-size: .68rem; color: var(--mid); }
-
-    /* PACK */
-    .pack { background: var(--green-pale); display: grid; grid-template-columns: 1fr 1fr; margin: 2rem 0; }
-    .pack-texto { padding: 5rem; display: flex; flex-direction: column; justify-content: center; }
-    .pack-texto p { margin-top: 1.2rem; font-size: .9rem; line-height: 1.8; color: var(--mid); max-width: 42ch; }
-    .pack-texto .btn-ppal { margin-top: 2.5rem; }
-    .pack-imagen { overflow: hidden; min-height: 480px; }
-    .pack-imagen img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-
-    /* RITUAL */
-    .ritual { padding: 6rem 3rem; max-width: 1200px; margin: 0 auto; }
-    .ritual-header { text-align: center; margin-bottom: 4rem; }
-    .ritual-header p { margin-top: .9rem; font-size: .9rem; color: var(--mid); }
-    .ritual-pasos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-    .paso { padding: 2.5rem 2rem; border-left: 1px solid var(--border); }
-    .paso:first-child { border-left: none; }
-    .paso-n { font-size: 3rem; font-weight: 700; color: var(--green-light); line-height: 1; margin-bottom: .8rem; }
-    .paso-t { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: .5rem; }
-    .paso-d { font-size: .82rem; color: var(--mid); line-height: 1.65; }
-    .paso-p { margin-top: 1rem; font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--green); }
+    /* LOTE */
+    .lote-seccion { background: var(--green); display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+    .lote-texto { padding: 5rem; display: flex; flex-direction: column; justify-content: center; }
+    .lote-texto .s-label { color: var(--green-light); }
+    .lote-texto .s-titulo { color: var(--white); }
+    .lote-texto p { margin-top: 1.2rem; font-size: .9rem; line-height: 1.8; color: rgba(255,255,255,0.7); max-width: 44ch; }
+    .lote-precio { font-size: 2.2rem; font-weight: 700; color: var(--white); margin-top: 1.5rem; }
+    .lote-precio span { font-size: 1rem; font-weight: 400; color: rgba(255,255,255,0.6); }
+    .lote-botones { margin-top: 2rem; }
+    .lote-imagen { overflow: hidden; }
+    .lote-imagen img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-height: 500px; }
 
     /* CONTACTO */
-    .contacto { display: grid; grid-template-columns: 1fr 1fr; background: var(--green); }
+    .contacto { display: grid; grid-template-columns: 1fr 1fr; background: var(--ink); }
     .ct-texto { padding: 5rem; display: flex; flex-direction: column; justify-content: center; }
     .ct-texto .s-label { color: var(--green-light); }
     .ct-texto .s-titulo { color: var(--white); }
-    .ct-texto p { margin-top: 1rem; font-size: .9rem; line-height: 1.75; color: rgba(255,255,255,0.7); max-width: 40ch; }
+    .ct-texto p { margin-top: 1rem; font-size: .9rem; line-height: 1.75; color: rgba(255,255,255,0.6); max-width: 40ch; }
     .ct-datos { margin-top: 2rem; display: flex; flex-direction: column; gap: .9rem; }
-    .dato { display: flex; align-items: center; gap: .9rem; font-size: .85rem; color: rgba(255,255,255,0.85); }
-    .dato-i { width: 32px; height: 32px; background: var(--green-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .ct-form { padding: 5rem; background: rgba(0,0,0,0.12); display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
+    .dato { display: flex; align-items: center; gap: .9rem; font-size: .85rem; color: rgba(255,255,255,0.8); }
+    .dato-i { width: 32px; height: 32px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .ct-form { padding: 5rem; background: rgba(255,255,255,0.04); display: flex; flex-direction: column; gap: 1rem; justify-content: center; }
     .fg { display: flex; flex-direction: column; gap: .3rem; }
-    .fg label { font-size: .65rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
-    .fg input, .fg textarea, .fg select { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: var(--white); padding: .75rem 1rem; font-family: var(--ff); font-size: .86rem; font-weight: 400; outline: none; transition: border-color .2s; }
-    .fg input:focus, .fg textarea:focus { border-color: rgba(255,255,255,0.6); }
+    .fg label { font-size: .65rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); }
+    .fg input, .fg textarea, .fg select { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15); color: var(--white); padding: .75rem 1rem; font-family: var(--ff); font-size: .86rem; outline: none; transition: border-color .2s; }
+    .fg input:focus, .fg textarea:focus { border-color: rgba(255,255,255,0.5); }
     .fg textarea { resize: vertical; min-height: 90px; }
-    .fg select option { background: var(--green); }
-    .btn-enviar { background: var(--red); color: var(--white); border: none; padding: .9rem; font-family: var(--ff); font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; transition: background .2s; margin-top: .3rem; }
-    .btn-enviar:hover { background: #c73d32; }
+    .fg select option { background: #323232; }
+    .btn-enviar { background: var(--green); color: var(--white); border: none; padding: .9rem; font-family: var(--ff); font-size: .74rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; cursor: pointer; transition: background .2s; margin-top: .3rem; }
+    .btn-enviar:hover { background: var(--green-dark); }
 
-    /* FOOTER */
-    footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.08); padding: 2rem 3rem; display: flex; align-items: center; justify-content: space-between; }
+    footer { background: #1a1a1a; padding: 2rem 3rem; display: flex; align-items: center; justify-content: space-between; }
     .f-logo { font-size: 1.2rem; font-weight: 700; color: var(--white); letter-spacing: .2em; }
-    .f-copy { font-size: .7rem; color: rgba(255,255,255,0.35); letter-spacing: .06em; }
+    .f-copy { font-size: .7rem; color: rgba(255,255,255,0.3); }
     .f-links { display: flex; gap: 2rem; }
-    .f-links a { font-size: .68rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.4); text-decoration: none; transition: color .2s; }
+    .f-links a { font-size: .68rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,0.35); text-decoration: none; transition: color .2s; }
     .f-links a:hover { color: var(--white); }
 
-    /* RESPONSIVE */
+    /* MODAL */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1000; align-items: center; justify-content: center; }
+    .modal-overlay.active { display: flex; }
+    .modal { background: var(--white); width: 100%; max-width: 500px; padding: 2.5rem; position: relative; max-height: 90vh; overflow-y: auto; }
+    .modal-close { position: absolute; top: 1rem; right: 1.2rem; font-size: 1.6rem; cursor: pointer; color: var(--mid); background: none; border: none; line-height: 1; }
+    .modal-titulo { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: .2rem; }
+    .modal-precio { font-size: 1.8rem; font-weight: 700; color: var(--green); margin-bottom: .4rem; }
+    .modal-subtitulo { font-size: .75rem; color: var(--mid); margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.2rem; }
+    #paypal-button-container { min-height: 50px; }
+    .modal-ok { display: none; text-align: center; padding: 2rem 0; }
+    .modal-ok p { font-size: .95rem; color: var(--ink); font-weight: 500; line-height: 1.7; margin-top: 1rem; }
+    .paypal-nota { text-align: center; margin-top: 1rem; font-size: .68rem; color: var(--mid); }
+
+    /* TITULOS DE LINEA */
+    .linea-titulo { padding: 3rem 3rem 0; max-width: 1280px; margin: 0 auto; border-top: 2px solid var(--green-pale); }
+    .linea-titulo h2 { font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+    .linea-titulo p { font-size: .85rem; color: var(--mid); margin-top: .3rem; }
+
     @media (max-width: 960px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
       .hero { grid-template-columns: 1fr; }
-      .hero-imagen { min-height: 60vw; }
+      .hero-imagen { min-height: 65vw; }
       .hero-texto { padding: 3rem 1.5rem; }
-      .filosofia { grid-template-columns: 1fr; gap: 3rem; padding: 0 1.5rem; margin: 4rem auto; }
-      .filosofia-texto { padding-right: 0; }
-      .galeria { padding: 1.5rem; }
-      .galeria-grid { grid-template-columns: 1fr 1fr; }
-      .galeria-item.grande { grid-column: span 2; }
-      .productos { padding: 3rem 1.5rem; }
-      .pack { grid-template-columns: 1fr; }
-      .pack-imagen { min-height: 55vw; order: -1; }
-      .pack-texto { padding: 3rem 1.5rem; }
-      .ritual { padding: 4rem 1.5rem; }
-      .ritual-pasos { grid-template-columns: 1fr 1fr; }
-      .contacto { grid-template-columns: 1fr; }
-      .ct-texto, .ct-form { padding: 3rem 1.5rem; }
+      .catalogo-seccion { padding: 3rem 1.5rem; }
+      .linea-titulo { padding: 2rem 1.5rem 0; }
+      .lote-seccion, .contacto { grid-template-columns: 1fr; }
+      .lote-texto, .ct-texto, .ct-form { padding: 3rem 1.5rem; }
+      .lote-imagen { order: -1; }
+      .lote-imagen img { min-height: 55vw; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
     @media (max-width: 560px) {
-      .ritual-pasos { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: 1fr 1fr; }
-      .galeria-grid { grid-template-columns: 1fr; }
-      .galeria-item.grande { grid-column: span 1; }
+      .productos-grid { grid-template-columns: 1fr 1fr; }
     }
-    @media (prefers-reduced-motion: reduce) {
-      .marquee-inner { animation: none; }
-    }
-
-    /* MEGAMENÚ */
-    .nav-links li { position: relative; }
-    .nav-links li:hover > .megamenu { display: flex; }
-    .megamenu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--white); border: 1px solid var(--border); border-top: 2px solid var(--green); box-shadow: 0 8px 24px rgba(0,0,0,0.1); padding: 2rem; gap: 3rem; z-index: 200; min-width: 560px; }
-    .megamenu-col h4 { font-size: .65rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--green); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); white-space: nowrap; }
-    .megamenu-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
-    .megamenu-col ul li a { font-size: .82rem; font-weight: 400; color: var(--ink); text-decoration: none; transition: color .2s; white-space: nowrap; }
-    .megamenu-col ul li a:hover { color: var(--green); }
-    .megamenu-col ul li a.ver-todo { font-weight: 600; color: var(--green); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin-top: .4rem; display: block; }
-    @media (max-width: 960px) { .megamenu { display: none !important; } }
+    @media (prefers-reduced-motion: reduce) { .marquee-inner { animation: none; } }
   </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">Envío gratuito en pedidos superiores a 50€ · Disponible en Salamanca</div>
+<div class="top-bar">Envío gratuito en pedidos superiores a 60€ · RIMAN Salamanca · rima.salamanca@gmail.com</div>
 
-<!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">RIMAN</a>
   <ul class="nav-links">
-    <li>
-      <a href="#productos">Productos ▾</a>
-      <div class="megamenu">
-        <div class="megamenu-col">
-          <h4>Por Categoría</h4>
-          <ul>
-            <li><a href="#productos" onclick="filtrar('categoria','cuidado-cabello','Cuidado del Cabello')">Cuidado del Cabello</a></li>
-            <li><a href="#productos" onclick="filtrar('categoria','cuidado-corporal','Cuidado Corporal')">Cuidado Corporal</a></li>
-            <li><a href="#productos" onclick="filtrar('todos','','Todos los productos')">Ver todo →</a></li>
-          </ul>
-        </div>
-        <div class="megamenu-col">
-          <h4>Por Necesidad</h4>
-          <ul>
-            <li><a href="#productos" onclick="filtrar('necesidad','frizz','Control del Frizz')">Control del Frizz</a></li>
-            <li><a href="#productos" onclick="filtrar('necesidad','limpieza','Limpieza y Acondicionado')">Limpieza y Acondicionado</a></li>
-            <li><a href="#productos" onclick="filtrar('necesidad','hidratacion','Hidratación')">Hidratación</a></li>
-            <li><a href="#productos" onclick="filtrar('todos','','Todos los productos')">Ver todo →</a></li>
-          </ul>
-        </div>
-        <div class="megamenu-col">
-          <h4>Por Línea</h4>
-          <ul>
-            <li><a href="#productos" onclick="filtrar('linea','deserticola','Línea Deserticola')">Deserticola</a></li>
-            <li><a href="#productos" onclick="filtrar('linea','suamel','Línea Suamel')">Suamel</a></li>
-            <li><a href="#productos" onclick="filtrar('todos','','Todos los productos')">Ver todo →</a></li>
-          </ul>
-        </div>
-      </div>
-    </li>
-    <li><a href="#ritual">Ritual</a></li>
-    <li><a href="#pack">Pack</a></li>
+    <li><a href="#icd">ICD Dermatology</a></li>
+    <li><a href="#botalab">Botalab</a></li>
+    <li><a href="#lifening">Lifening</a></li>
+    <li><a href="#lote">Lote</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Consulta gratuita</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-texto">
-    <span class="hero-eyebrow">Skincare Dermatológico · Salamanca</span>
-    <h1 class="hero-titulo">La piel que<br>mereces, con<br><em>ciencia real</em></h1>
-    <p class="hero-sub">Fórmulas desarrolladas en colaboración con dermatólogos. Eficacia comprobada para la piel más exigente. Sin concesiones.</p>
-    <a href="#productos" class="btn-ppal">Descubrir productos</a>
+    <span class="hero-eyebrow">Skincare & Wellness · Salamanca</span>
+    <h1 class="hero-titulo">Cuida tu piel<br>con <em>ciencia real</em></h1>
+    <p class="hero-sub">Catálogo completo RIMAN: ICD Dermatology, Botalab y Lifening. Formulaciones con nanoliposomas y tecnología de absorción avanzada.</p>
+    <a href="#icd" class="btn-ppal">Ver catálogo</a>
   </div>
   <div class="hero-imagen">
-    <img src="prod_gama_completa.jpeg" alt="Gama completa RIMAN skincare" loading="eager">
-    <div class="hero-badge">Dermatology Collection</div>
+    <img src="gama_completa.jpeg" alt="Gama completa RIMAN Salamanca" loading="eager">
+    <div class="hero-badge">ICD · Botalab · Lifening</div>
   </div>
 </section>
 
-<!-- MARQUEE -->
 <div class="marquee">
   <div class="marquee-inner">
-    <span>Fórmulas Dermatológicas</span><span>·</span><span>Sin Parabenos</span><span>·</span><span>Testado Dermatológicamente</span><span>·</span><span>Hidratación Profunda</span><span>·</span><span>Protección SPF50+</span><span>·</span><span>Disponible en Salamanca</span><span>·</span>
-    <span>Fórmulas Dermatológicas</span><span>·</span><span>Sin Parabenos</span><span>·</span><span>Testado Dermatológicamente</span><span>·</span><span>Hidratación Profunda</span><span>·</span><span>Protección SPF50+</span><span>·</span><span>Disponible en Salamanca</span><span>·</span>
+    <span>ICD Dermatology</span><span>·</span><span>Nanoliposomas</span><span>·</span><span>Centella BYoungPool</span><span>·</span><span>Botalab Deserticola</span><span>·</span><span>Lifening Nutricosmética</span><span>·</span><span>SPF50+ PA++++</span><span>·</span><span>Sin Parabenos</span><span>·</span><span>Salamanca</span><span>·</span>
+    <span>ICD Dermatology</span><span>·</span><span>Nanoliposomas</span><span>·</span><span>Centella BYoungPool</span><span>·</span><span>Botalab Deserticola</span><span>·</span><span>Lifening Nutricosmética</span><span>·</span><span>SPF50+ PA++++</span><span>·</span><span>Sin Parabenos</span><span>·</span><span>Salamanca</span><span>·</span>
   </div>
 </div>
 
-<!-- FILOSOFÍA -->
-<section class="filosofia">
-  <div class="filosofia-texto">
-    <span class="s-label">Nuestra filosofía</span>
-    <h2 class="s-titulo">Ingredientes que<br><em>trabajan de verdad</em></h2>
-    <p>En RIMAN creemos que el cuidado de la piel no debería ser complicado. Cada producto está formulado con ingredientes activos de alta concentración, respaldados por la dermatología.</p>
-    <p>Sin rellenos innecesarios, sin fragancias artificiales. Solo lo que tu piel necesita para estar en su mejor versión.</p>
+<!-- FILTROS -->
+<div style="padding:2rem 3rem 0;max-width:1280px;margin:0 auto;">
+  <div class="filtros">
+    <button class="filtro-btn activo" onclick="filtrar('todos')">Todos</button>
+    <button class="filtro-btn" onclick="filtrar('icd')">ICD Dermatology</button>
+    <button class="filtro-btn" onclick="filtrar('botalab')">Botalab</button>
+    <button class="filtro-btn" onclick="filtrar('lifening')">Lifening</button>
   </div>
-  <div class="stats">
-    <div class="stat"><div class="stat-n">10</div><div class="stat-d">Productos en la colección</div></div>
-    <div class="stat"><div class="stat-n">0</div><div class="stat-d">Parabenos · Sin sulfatos</div></div>
-    <div class="stat"><div class="stat-n">SPF<br>50+</div><div class="stat-d">Protección solar máxima</div></div>
-    <div class="stat"><div class="stat-n">✓</div><div class="stat-d">Testado dermatológicamente</div></div>
-  </div>
-</section>
+</div>
 
-<!-- GALERÍA FOTOS REALES -->
-<section class="galeria">
-  <div class="galeria-grid">
-    <div class="galeria-item grande">
-      <img src="prod_pack_flores.jpeg" alt="Gama RIMAN con flores azules" loading="lazy">
-    </div>
-    <div class="galeria-item">
-      <img src="prod_calming_gel.jpeg" alt="Calming Balance Gel" loading="lazy">
-    </div>
-    <div class="galeria-item">
-      <img src="prod_oil_mist.jpeg" alt="Two Phase Oil Mist" loading="lazy">
-    </div>
-    <div class="galeria-item">
-      <img src="prod_sheer_bb.jpeg" alt="Sheer Glow BB" loading="lazy">
-    </div>
-    <div class="galeria-item grande">
-      <img src="prod_crema_flores.jpeg" alt="Dermatology Cream" loading="lazy">
-    </div>
-  </div>
-</section>
+<!-- ICD DERMATOLOGY -->
+<div class="linea-titulo" id="icd">
+  <h2>ICD Dermatology</h2>
+  <p>Dermatología Celular · Tecnología Nanoliposomas · Centella BYoungPool de Jeju</p>
+</div>
+<section class="catalogo-seccion" data-linea="icd">
+  <div class="productos-grid">
 
-<!-- PRODUCTOS -->
-<section class="productos" id="productos">
-  <div class="productos-header">
-    <div>
-      <span class="s-label" id="filtro-label">Catálogo completo</span>
-      <h2 class="s-titulo">Todos los <em>productos</em></h2>
-    </div>
-    <p style="font-size:.8rem;color:var(--mid);max-width:28ch;text-align:right;">Consulta disponibilidad y precios contactándonos directamente</p>
-  </div>
-  <div class="productos-grid" id="productos-grid">
-
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="limpieza hidratacion" data-linea="icd">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_pack_flores.jpeg" alt="Moisture Cleansing Oil" loading="lazy">
-        <span class="card-tag">Limpieza</span>
+        <img src="TL_DermatologyFirstPackage_DFLT.png" alt="ICD Dermatology First Package">
+        <span class="card-linea">ICD</span><span class="card-tag">Pack</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Limpieza · 145 ml</div>
-        <h3 class="card-nombre">Moisture Cleansing Oil</h3>
-        <p class="card-desc">Aceite limpiador que disuelve maquillaje e impurezas sin resecar. Fórmula de enjuague suave.</p>
+        <div class="card-cat">Set · Booster 130ml + Serum 45ml</div>
+        <h3 class="card-nombre">ICD Dermatology First Package</h3>
+        <div class="card-ingrediente">✦ Centella BYoungPool · Nanoliposomas</div>
+        <p class="card-desc">Booster y sérum que actúan conjuntamente para mejorar luminosidad, elasticidad y aspecto saludable con uso continuo.</p>
         <div class="card-footer">
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">109,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Dermatology First Package', 109.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="limpieza" data-linea="icd">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_lineup.jpeg" alt="Cleansing Powder Wash" loading="lazy">
-        <span class="card-tag">Limpieza</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Booster</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Limpieza · 80 g</div>
-        <h3 class="card-nombre">Cleansing Powder Wash</h3>
-        <p class="card-desc">Polvo limpiador enzimático activado con el agua. Exfolia suavemente y elimina el exceso de sebo.</p>
+        <div class="card-cat">Booster · Rutina facial</div>
+        <h3 class="card-nombre">ICD Booster</h3>
+        <div class="card-ingrediente">✦ Centella Asiática 89% · Nanoliposomas</div>
+        <p class="card-desc">Hidratación 81% más potente. Frena el envejecimiento celular y potencia la eficacia del resto de productos del ritual.</p>
         <div class="card-footer">
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">109,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Booster', 109.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_oil_mist.jpeg" alt="Two Phase Oil Mist" loading="lazy">
-        <span class="card-tag">Hidratación</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Crema</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Hidratación · 50 ml</div>
-        <h3 class="card-nombre">Two Phase Oil Mist</h3>
-        <p class="card-desc">Bruma bifásica de aceite y agua que hidrata y da luminosidad instantánea. Agitar antes de usar.</p>
+        <div class="card-cat">Crema hidratante · 50 ml</div>
+        <h3 class="card-nombre">ICD Dermatology Cream</h3>
+        <div class="card-ingrediente">✦ Centella BYoungPool · Nanoliposomas</div>
+        <p class="card-desc">Hidrata en profundidad, mejora la textura y refuerza la protección natural de la piel. La más famosa de la colección.</p>
         <div class="card-footer">
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">72,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Dermatology Cream', 72.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_calming_gel.jpeg" alt="Calming Balance Gel" loading="lazy">
-        <span class="card-tag">Calmante</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Calmante</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Calmante · 100 ml</div>
-        <h3 class="card-nombre">Calming Balance Gel</h3>
-        <p class="card-desc">Gel calmante e hidratante que equilibra la microbiota cutánea. Ideal para pieles sensibles o reactivas.</p>
+        <div class="card-cat">Gel calmante · 100 ml</div>
+        <h3 class="card-nombre">ICD Calming Balance Gel</h3>
+        <div class="card-ingrediente">✦ Centella BYoungPool · Oro 24k · Nanoliposomas</div>
+        <p class="card-desc">Calma pieles sensibles, reduce rojeces y aporta equilibrio y confort. Ideal para pieles reactivas.</p>
         <div class="card-footer">
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">39,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Calming Balance Gel', 39.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_crema_flores.jpeg" alt="Dermatology Cream" loading="lazy">
-        <span class="card-tag">Estrella</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Limpieza</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Crema · 50 ml</div>
-        <h3 class="card-nombre">Dermatology Cream</h3>
-        <p class="card-desc">Crema hidratante de barrera reparadora. Nutritiva y densa para pieles secas o deshidratadas.</p>
+        <div class="card-cat">Polvo limpiador · 80 g</div>
+        <h3 class="card-nombre">ICD Cleansing Powder Wash</h3>
+        <div class="card-ingrediente">✦ Centella BYoungPool · Nanoliposomas</div>
+        <p class="card-desc">Doble limpieza profunda y suave. Se activa con el agua formando espuma. Regenera y aporta luminosidad.</p>
         <div class="card-footer">
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">40,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Cleansing Powder Wash', 40.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_gama_completa.jpeg" alt="Dermatology Serum" loading="lazy">
-        <span class="card-tag">Tratamiento</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Limpieza</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Sérum · 130 ml</div>
-        <h3 class="card-nombre">Dermatology Serum</h3>
-        <p class="card-desc">Sérum concentrado de alta penetración. Actúa en las capas profundas para un efecto visible desde la primera semana.</p>
+        <div class="card-cat">Aceite limpiador · 145 ml</div>
+        <h3 class="card-nombre">ICD Moisture Cleansing Oil</h3>
+        <div class="card-ingrediente">✦ Centella BYoungPool · Nanoliposomas</div>
+        <p class="card-desc">Doble limpieza hidratante. Se desliza suavemente eliminando maquillaje e impurezas. Mejora la barrera cutánea.</p>
         <div class="card-footer">
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">40,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Moisture Cleansing Oil', 40.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="icd">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_lineup.jpeg" alt="Dermatology Booster" loading="lazy">
-        <span class="card-tag">Tratamiento</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Hidratación</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Booster · 125 ml</div>
-        <h3 class="card-nombre">Dermatology Booster</h3>
-        <p class="card-desc">Booster potenciador que amplifica la eficacia de los demás productos del ritual. Aplicar previo al sérum.</p>
+        <div class="card-cat">Bruma bifásica · 50 ml</div>
+        <h3 class="card-nombre">ICD Two-Phase Oil Mist</h3>
+        <div class="card-ingrediente">✦ Agua Energética de Jeju · Nanoliposomas</div>
+        <p class="card-desc">Hidrata, calma y aporta glow inmediato. Agua filtrada por lava volcánica de Jeju. Agitar antes de usar.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">39,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Two-Phase Oil Mist', 39.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-cabello" data-necesidad="hidratacion frizz" data-linea="deserticola">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_multi_balm.jpeg" alt="Multi Stick Balm" loading="lazy">
-        <span class="card-tag">Multiusos</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Mascarilla</span>
       </div>
       <div class="card-info">
-        <div class="card-cat">Bálsamo · 8,5 g</div>
-        <h3 class="card-nombre">Multi Stick Balm</h3>
-        <p class="card-desc">Bálsamo multifunción en barra. Hidrata labios, contorno de ojos y zonas secas puntuales. Para llevar siempre.</p>
+        <div class="card-cat">Mascarilla · Colágeno 100%</div>
+        <h3 class="card-nombre">ICD Collagen 100 Melting Mask</h3>
+        <div class="card-ingrediente">✦ Colágeno puro · Tecnología absorción profunda</div>
+        <p class="card-desc">Mascarilla de colágeno que se funde en la piel. Mejora firmeza, suaviza líneas visibles y devuelve elasticidad.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">120,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Collagen 100 Melting Mask', 120.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-corporal" data-necesidad="hidratacion" data-linea="suamel">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_gama_completa.jpeg" alt="Moisture Layer Sun Protector" loading="lazy">
-        <span class="card-tag">Solar</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Multiusos</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Bálsamo sólido · 8,5 g</div>
+        <h3 class="card-nombre">ICD Multi Stick Balm</h3>
+        <div class="card-ingrediente">✦ Centella BYoungPool · Nanoliposomas</div>
+        <p class="card-desc">Hidratación y cuidado en cualquier lugar. Zonas secas, ojeras y labios. Fácil de llevar siempre contigo.</p>
+        <div class="card-footer">
+          <span class="card-precio">35,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Multi Stick Balm', 35.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-linea="icd">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">Solar</span>
       </div>
       <div class="card-info">
         <div class="card-cat">Protector solar · 50 ml</div>
-        <h3 class="card-nombre">Moisture Layer Sun Protector</h3>
-        <p class="card-desc">SPF 50+ PA++++ con base hidratante. Acabado invisible, sin residuo blanco. Uso diario imprescindible.</p>
+        <h3 class="card-nombre">ICD Sun Protector SPF50+</h3>
+        <div class="card-ingrediente">✦ Filtros solares · Centella BYoungPool · Nanoliposomas</div>
+        <p class="card-desc">Protección SPF50+ PA++++ sin residuo blanco. Acabado invisible y ligero. Uso facial diario imprescindible.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">35,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('ICD Sun Protector SPF50+', 35.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
 
-    <article class="card" data-categoria="cuidado-cabello" data-necesidad="limpieza frizz" data-linea="deserticola">
+    <article class="card" data-linea="icd">
       <div class="card-img">
-        <img src="prod_sheer_bb.jpeg" alt="Sheer Glow BB" loading="lazy">
-        <span class="card-tag">Color</span>
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">ICD</span><span class="card-tag">BB Cream</span>
       </div>
       <div class="card-info">
         <div class="card-cat">BB Cream · 30 g</div>
         <h3 class="card-nombre">Sheer Glow BB</h3>
-        <p class="card-desc">BB cream de cobertura ligera y luminosa. Unifica el tono con efecto segunda piel y cuidado simultáneo.</p>
+        <div class="card-ingrediente">✦ Filtros solares · Ingredientes hidratantes</div>
+        <p class="card-desc">Cobertura ligera con glow natural. Unifica el tono con efecto segunda piel y protección de amplio espectro.</p>
         <div class="card-footer">
-          <span style="font-family:var(--ff-d);font-size:1.1rem;color:var(--sage-deep)">Consultar</span>
-          <button class="btn-info" onclick="irContacto()">Pedir info</button>
-          <button class="btn-comprar" onclick="abrirPago(this)">Comprar</button>
+          <span class="card-precio">35,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Sheer Glow BB', 35.00)">Comprar</button>
+          </div>
         </div>
       </div>
     </article>
@@ -495,52 +442,181 @@
   </div>
 </section>
 
-<!-- PACK DESTACADO -->
-<section class="pack" id="pack">
-  <div class="pack-texto">
-    <span class="s-label">Pack recomendado</span>
-    <h2 class="s-titulo">Dermatology<br><em>First Package</em></h2>
-    <p>El pack de iniciación ideal para comenzar tu ritual con RIMAN. Incluye los productos esenciales seleccionados por nuestros expertos para una rutina completa y equilibrada.</p>
-    <p>Limpieza, tratamiento e hidratación en un solo kit.</p>
-    <a href="#contacto" class="btn-ppal">Solicitar pack</a>
-  </div>
-  <div class="pack-imagen">
-    <img src="prod_pack_flores.jpeg" alt="Dermatology First Package RIMAN" loading="lazy">
+<!-- BOTALAB -->
+<div class="linea-titulo" id="botalab">
+  <h2>Botalab</h2>
+  <p>Cuidado Capilar & Corporal · Deserticola · Suamel · Tecnología vegano-lógica</p>
+</div>
+<section class="catalogo-seccion" data-linea="botalab">
+  <div class="productos-grid">
+
+    <article class="card" data-linea="botalab">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">Botalab</span><span class="card-tag">Champú</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Cuidado capilar · Champú</div>
+        <h3 class="card-nombre">Botalab Deserticola Plus Shampoo</h3>
+        <div class="card-ingrediente">✦ Deserticola · Tecnología vegano-lógica</div>
+        <p class="card-desc">Fortalece desde la raíz y el cuero cabelludo. Limpieza profunda sin resecar. Patentes registradas.</p>
+        <div class="card-footer">
+          <span class="card-precio">2,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Botalab Deserticola Plus Shampoo', 2.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-linea="botalab">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">Botalab</span><span class="card-tag">Acondicionador</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Cuidado capilar · Acondicionador</div>
+        <h3 class="card-nombre">Botalab Deserticola Plus Conditioner</h3>
+        <div class="card-ingrediente">✦ Deserticola · Patentes registradas</div>
+        <p class="card-desc">Mejora el entorno del cuero cabelludo. Cabello más fuerte, denso y nutrido con uso continuado.</p>
+        <div class="card-footer">
+          <span class="card-precio">2,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Botalab Deserticola Plus Conditioner', 2.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-linea="botalab">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">Botalab</span><span class="card-tag">Sérum</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Cuidado capilar · Sérum en aceite</div>
+        <h3 class="card-nombre">Deserticola Plus Hair Oil Serum</h3>
+        <div class="card-ingrediente">✦ Deserticola · Fórmulas vegano-lógicas</div>
+        <p class="card-desc">Absorción rápida sin residuo. Aporta brillo, controla el encrespamiento y nutre el cabello en profundidad.</p>
+        <div class="card-footer">
+          <span class="card-precio">2,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Deserticola Plus Hair Oil Serum', 2.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-linea="botalab">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">Botalab</span><span class="card-tag">Corporal</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Cuidado corporal · Crema</div>
+        <h3 class="card-nombre">Suamel Nourishing Body Cream</h3>
+        <div class="card-ingrediente">✦ Hyalucollagen-3 · Glicolípidos · Suamel</div>
+        <p class="card-desc">Hidratación intensa y duradera. Mejora la suavidad, biorremediación y confort de la piel corporal.</p>
+        <div class="card-footer">
+          <span class="card-precio">2,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Suamel Nourishing Body Cream', 2.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-linea="botalab">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">Botalab</span><span class="card-tag">Corporal</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Cuidado corporal · Gel de ducha</div>
+        <h3 class="card-nombre">Suamel Nourishing Body Wash</h3>
+        <div class="card-ingrediente">✦ Hyalucollagen-3 · Suamel · Patentes RIMAN</div>
+        <p class="card-desc">Limpieza suave que nutre la barrera cutánea. Deja la piel elástica e hidratada tras cada uso.</p>
+        <div class="card-footer">
+          <span class="card-precio">2,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Suamel Nourishing Body Wash', 2.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
-<!-- RITUAL -->
-<section class="ritual" id="ritual">
-  <div class="ritual-header">
-    <span class="s-label" style="display:block;text-align:center">Cómo usarlos</span>
-    <h2 class="s-titulo" style="text-align:center">El <em>ritual</em> RIMAN</h2>
-    <p>Cuatro pasos para una piel en su mejor versión, mañana y noche.</p>
+<!-- LIFENING -->
+<div class="linea-titulo" id="lifening">
+  <h2>Lifening</h2>
+  <p>Nutricosmética · Suplementos de alta biodisponibilidad · Belleza desde el interior</p>
+</div>
+<section class="catalogo-seccion" data-linea="lifening">
+  <div class="productos-grid">
+
+    <article class="card" data-linea="lifening">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">Lifening</span><span class="card-tag">Nutricosmética</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Suplemento bebible · Sabor granada</div>
+        <h3 class="card-nombre">Beauty Collagen EX</h3>
+        <div class="card-ingrediente">✦ Péptidos baja molécula · Ác. hialurónico · Ceramidas</div>
+        <p class="card-desc">Cuidado de piel y cabello desde el interior. Hidratación profunda con alta biodisponibilidad. Sabor granada.</p>
+        <div class="card-footer">
+          <span class="card-precio">2,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Beauty Collagen EX', 2.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-linea="lifening">
+      <div class="card-img">
+        <div class="card-placeholder"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b0bfba" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Imagen próximamente</span></div>
+        <span class="card-linea">Lifening</span><span class="card-tag">Nutricosmética</span>
+      </div>
+      <div class="card-info">
+        <div class="card-cat">Suplemento · Microbiota</div>
+        <h3 class="card-nombre">Deep Talk Plus</h3>
+        <div class="card-ingrediente">✦ Fibra natural · Alta biodisponibilidad</div>
+        <p class="card-desc">Cuidado de la microbiota intestinal y regularidad digestiva. Bienestar desde el interior para una piel más sana.</p>
+        <div class="card-footer">
+          <span class="card-precio">2,00 €</span>
+          <div style="display:flex;gap:.4rem;">
+            <button class="btn-info" onclick="irContacto()">Info</button>
+            <button class="btn-comprar" onclick="abrirPago('Deep Talk Plus', 2.00)">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </article>
+
   </div>
-  <div class="ritual-pasos">
-    <div class="paso">
-      <div class="paso-n">01</div>
-      <h3 class="paso-t">Limpieza</h3>
-      <p class="paso-d">Elimina maquillaje, sebo y partículas contaminantes sin alterar el manto ácido de la piel.</p>
-      <p class="paso-p">→ Cleansing Oil · Powder Wash</p>
+</section>
+
+<!-- LOTE -->
+<section class="lote-seccion" id="lote">
+  <div class="lote-texto">
+    <span class="s-label">Mejor precio</span>
+    <h2 class="s-titulo">Lote completo<br><em>toda la colección</em></h2>
+    <p>Los productos de la colección ICD Dermatology en un único pedido. La forma más completa y económica de empezar tu ritual de skincare.</p>
+    <div class="lote-precio">295,00 € <span>· colección ICD completa</span></div>
+    <div class="lote-botones">
+      <button class="btn-comprar" style="font-size:.85rem;padding:.9rem 2.2rem;" onclick="abrirPago('Lote completo ICD Dermatology', 295.00)">Comprar lote · 295,00 €</button>
     </div>
-    <div class="paso">
-      <div class="paso-n">02</div>
-      <h3 class="paso-t">Tratamiento</h3>
-      <p class="paso-d">Aplica el Booster y el Sérum para potenciar la regeneración celular y tratar en profundidad.</p>
-      <p class="paso-p">→ Booster · Dermatology Serum</p>
-    </div>
-    <div class="paso">
-      <div class="paso-n">03</div>
-      <h3 class="paso-t">Hidratación</h3>
-      <p class="paso-d">Sella la humedad y calma la piel con el gel equilibrante y la crema reparadora de barrera.</p>
-      <p class="paso-p">→ Balance Gel · Dermatology Cream</p>
-    </div>
-    <div class="paso">
-      <div class="paso-n">04</div>
-      <h3 class="paso-t">Protección</h3>
-      <p class="paso-d">Por la mañana, protege con SPF 50+ y termina con el toque luminoso de la BB cream.</p>
-      <p class="paso-p">→ Sun Protector · Sheer Glow BB</p>
-    </div>
+  </div>
+  <div class="lote-imagen">
+    <img src="gama_completa.jpeg" alt="Lote completo ICD Dermatology RIMAN Salamanca" loading="lazy">
   </div>
 </section>
 
@@ -548,209 +624,114 @@
 <section class="contacto" id="contacto">
   <div class="ct-texto">
     <span class="s-label">Estamos en Salamanca</span>
-    <h2 class="s-titulo">Pide tu<br><em>consulta</em><br>gratuita</h2>
-    <p>Te ayudamos a encontrar los productos ideales para tu tipo de piel y objetivo. Te respondemos en menos de 24 horas.</p>
+    <h2 class="s-titulo">Pide tu<br><em style="color:var(--green-light)">consulta</em><br>gratuita</h2>
+    <p>Te ayudamos a elegir los productos ideales para tu piel. Respondemos en menos de 24 horas.</p>
     <div class="ct-datos">
-      <div class="dato">
-        <div class="dato-i"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <span>Salamanca, España</span>
-      </div>
-      <div class="dato">
-        <div class="dato-i"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></div>
-        <span>rimansalamanca.com</span>
-      </div>
-      <div class="dato">
-        <div class="dato-i"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-        <span>WhatsApp disponible</span>
-      </div>
+      <div class="dato"><div class="dato-i"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>Calle María Auxiliadora 20-22, 37004 Salamanca</span></div>
+      <div class="dato"><div class="dato-i"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></div><span>rima.salamanca@gmail.com</span></div>
+      <div class="dato"><div class="dato-i"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.15a16 16 0 006.94 6.94l1.51-1.51a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><span>WhatsApp disponible</span></div>
     </div>
   </div>
   <div class="ct-form">
-    <div class="fg">
-      <label>Nombre</label>
-      <input type="text" placeholder="Tu nombre">
-    </div>
-    <div class="fg">
-      <label>Email o teléfono</label>
-      <input type="text" placeholder="Para contactarte">
-    </div>
+    <div class="fg"><label>Nombre</label><input type="text" id="ct-nombre" placeholder="Tu nombre"></div>
+    <div class="fg"><label>Email o teléfono</label><input type="text" id="ct-contacto" placeholder="Para contactarte"></div>
     <div class="fg">
       <label>Producto de interés</label>
-      <select>
+      <select id="ct-producto">
         <option value="">Seleccionar...</option>
-        <option>Moisture Cleansing Oil</option>
-        <option>Cleansing Powder Wash</option>
-        <option>Two Phase Oil Mist</option>
-        <option>Calming Balance Gel</option>
-        <option>Dermatology Cream</option>
-        <option>Dermatology Serum</option>
-        <option>Dermatology Booster</option>
-        <option>Multi Stick Balm</option>
-        <option>Moisture Layer Sun Protector</option>
-        <option>Sheer Glow BB</option>
-        <option>Dermatology First Package (pack completo)</option>
+        <optgroup label="ICD Dermatology">
+          <option>ICD Dermatology First Package</option>
+          <option>ICD Booster</option>
+          <option>ICD Dermatology Cream</option>
+          <option>ICD Calming Balance Gel</option>
+          <option>ICD Cleansing Powder Wash</option>
+          <option>ICD Moisture Cleansing Oil</option>
+          <option>ICD Two-Phase Oil Mist</option>
+          <option>ICD Collagen 100 Melting Mask</option>
+          <option>ICD Multi Stick Balm</option>
+          <option>ICD Sun Protector SPF50+</option>
+          <option>Sheer Glow BB</option>
+        </optgroup>
+        <optgroup label="Botalab">
+          <option>Botalab Deserticola Plus Shampoo</option>
+          <option>Botalab Deserticola Plus Conditioner</option>
+          <option>Deserticola Plus Hair Oil Serum</option>
+          <option>Suamel Nourishing Body Cream</option>
+          <option>Suamel Nourishing Body Wash</option>
+        </optgroup>
+        <optgroup label="Lifening">
+          <option>Beauty Collagen EX</option>
+          <option>Deep Talk Plus</option>
+        </optgroup>
+        <option>Lote completo ICD (295€)</option>
         <option>No sé, necesito asesoramiento</option>
       </select>
     </div>
-    <div class="fg">
-      <label>Mensaje (opcional)</label>
-      <textarea placeholder="Cuéntanos tu tipo de piel o cualquier duda..."></textarea>
-    </div>
-    <button class="btn-enviar" onclick="enviar(this)">Enviar consulta</button>
+    <div class="fg"><label>Mensaje (opcional)</label><textarea id="ct-mensaje" placeholder="Cuéntanos tu tipo de piel o cualquier duda..."></textarea></div>
+    <button class="btn-enviar" onclick="enviar()">Enviar consulta por WhatsApp</button>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="f-logo">RIMAN</div>
   <div class="f-copy">© 2026 rimansalamanca.com · Todos los derechos reservados</div>
   <div class="f-links">
-    <a href="#productos">Productos</a>
-    <a href="#ritual">Ritual</a>
+    <a href="#icd">ICD</a>
+    <a href="#botalab">Botalab</a>
+    <a href="#lifening">Lifening</a>
     <a href="#contacto">Contacto</a>
   </div>
 </footer>
 
-<script>
-  function filtrar(tipo, valor, etiqueta) {
-    const cards = document.querySelectorAll('#productos-grid .card');
-    cards.forEach(card => {
-      if (tipo === 'todos') {
-        card.style.display = '';
-      } else {
-        const datos = card.dataset[tipo] || '';
-        card.style.display = datos.split(' ').includes(valor) ? '' : 'none';
-      }
-    });
-    document.getElementById('filtro-label').textContent = etiqueta;
-  }
-
-  function irContacto() {
-    document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
-  }
-  function enviar(btn) {
-    const form = btn.closest('.ct-form');
-    const nombre   = form.querySelector('input[type="text"]').value.trim();
-    const contacto = form.querySelectorAll('input[type="text"]')[1].value.trim();
-    const producto = form.querySelector('select').value;
-    const mensaje  = form.querySelector('textarea').value.trim();
-
-    if (!nombre || !contacto) {
-      alert('Por favor, rellena tu nombre y datos de contacto.');
-      return;
-    }
-
-    let texto = `Hola, soy *${nombre}*.\n`;
-    if (producto) texto += `Estoy interesado/a en: *${producto}*.\n`;
-    if (mensaje)  texto += `\n${mensaje}\n`;
-    texto += `\nContacto: ${contacto}`;
-
-    const url = `https://wa.me/34672617360?text=${encodeURIComponent(texto)}`;
-    window.open(url, '_blank');
-  }
-  // Animación scroll
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.card, .paso, .stat, .galeria-item').forEach(el => {
-    el.style.opacity='0'; el.style.transform='translateY(20px)';
-    el.style.transition='opacity .5s ease, transform .5s ease';
-    obs.observe(el);
-  });
-</script>
-
-<!-- MODAL PAGO -->
+<!-- MODAL PAYPAL -->
 <div class="modal-overlay" id="modalPago">
   <div class="modal">
     <button class="modal-close" onclick="cerrarPago()">×</button>
     <div id="modal-contenido">
       <p class="modal-titulo" id="modal-nombre-producto"></p>
       <p class="modal-precio" id="modal-precio-producto"></p>
-      <div class="fg">
-        <label>Nombre completo</label>
-        <input type="text" id="pay-nombre" placeholder="Tu nombre">
-      </div>
-      <div class="fg">
-        <label>Email</label>
-        <input type="email" id="pay-email" placeholder="tu@email.com">
-      </div>
-      <div class="fg">
-        <label>Datos de tarjeta</label>
-        <div id="card-element"></div>
-      </div>
-      <div id="card-errors"></div>
-      <button class="btn-pagar" id="btn-pagar" onclick="procesarPago()">Pagar ahora</button>
-      <p class="stripe-badge">🔒 Pago seguro con <strong>Stripe</strong> · Datos cifrados SSL</p>
+      <p class="modal-subtitulo">Pago seguro con PayPal. Puedes pagar con tarjeta sin tener cuenta PayPal.</p>
+      <div id="paypal-button-container"></div>
+      <p class="paypal-nota">🔒 Cifrado SSL · Protección al comprador de PayPal</p>
     </div>
     <div class="modal-ok" id="modal-ok">
       <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="28" fill="#3c544b"/><path d="M17 28l8 8 14-16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <p>¡Pago realizado con éxito!<br>Te enviaremos la confirmación por email.</p>
+      <p>¡Pago completado con éxito!<br><br>Recibirás un email de confirmación.<br>Nos pondremos en contacto para coordinar el envío.</p>
     </div>
   </div>
 </div>
 
-<script src="https://js.stripe.com/v3/"></script>
+<!-- PAYPAL: sustituye TU_CLIENT_ID_AQUI por tu Client ID real -->
+<script src="https://www.paypal.com/sdk/js?client-id=TU_CLIENT_ID_AQUI&currency=EUR&locale=es_ES"></script>
 <script>
-  /* ============================================================
-     STRIPE — Configuración
-     Reemplaza pk_test_... por tu clave pública real cuando
-     te des de alta en stripe.com
-  ============================================================ */
-  const STRIPE_PUBLIC_KEY = 'pk_test_51OExampleKeyReplaceMeWithYourRealStripePublishableKey00000000';
+  let productoActual = null;
 
-  const PRECIOS = {
-    'Moisture Cleansing Oil':       { precio: 32, display: '32,00 €' },
-    'Cleansing Powder Wash':        { precio: 28, display: '28,00 €' },
-    'Two Phase Oil Mist':           { precio: 35, display: '35,00 €' },
-    'Calming Balance Gel':          { precio: 30, display: '30,00 €' },
-    'Dermatology Cream':            { precio: 45, display: '45,00 €' },
-    'Dermatology Serum':            { precio: 55, display: '55,00 €' },
-    'Dermatology Booster':          { precio: 48, display: '48,00 €' },
-    'Multi Stick Balm':             { precio: 18, display: '18,00 €' },
-    'Moisture Layer Sun Protector': { precio: 38, display: '38,00 €' },
-    'Sheer Glow BB':                { precio: 34, display: '34,00 €' },
-  };
-
-  let stripe, cardElement, productoActual;
-
-  function initStripe() {
-    if (stripe) return;
-    stripe = Stripe(STRIPE_PUBLIC_KEY);
-    const elements = stripe.elements({ locale: 'es' });
-    cardElement = elements.create('card', {
-      style: {
-        base: { fontFamily: 'Montserrat, sans-serif', fontSize: '15px', color: '#323232',
-                '::placeholder': { color: '#b0b0b0' } },
-        invalid: { color: '#ed4a3e' }
-      }
-    });
-    cardElement.mount('#card-element');
-    cardElement.on('change', e => {
-      document.getElementById('card-errors').textContent = e.error ? e.error.message : '';
-    });
-  }
-
-  function abrirPago(btn) {
-    const card = btn.closest('.card');
-    const nombre = card.querySelector('.card-nombre').textContent.trim();
-    const info   = PRECIOS[nombre] || { precio: 0, display: 'Consultar' };
-
-    productoActual = { nombre, ...info };
+  function abrirPago(nombre, precio) {
+    productoActual = { nombre, precio };
     document.getElementById('modal-nombre-producto').textContent = nombre;
-    document.getElementById('modal-precio-producto').textContent = info.display;
+    document.getElementById('modal-precio-producto').textContent =
+      precio.toLocaleString('es-ES', { style: 'currency', currency: 'EUR' });
     document.getElementById('modal-ok').style.display = 'none';
     document.getElementById('modal-contenido').style.display = 'block';
-    document.getElementById('card-errors').textContent = '';
-    document.getElementById('pay-nombre').value = '';
-    document.getElementById('pay-email').value = '';
-
+    document.getElementById('paypal-button-container').innerHTML = '';
+    paypal.Buttons({
+      style: { layout: 'vertical', color: 'gold', shape: 'rect', label: 'pay', height: 45 },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{ description: productoActual.nombre, amount: { currency_code: 'EUR', value: productoActual.precio.toFixed(2) } }]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function() {
+          document.getElementById('modal-contenido').style.display = 'none';
+          document.getElementById('modal-ok').style.display = 'block';
+          setTimeout(cerrarPago, 6000);
+        });
+      },
+      onError: function() { alert('Error en el pago. Inténtalo de nuevo o contáctanos por WhatsApp.'); }
+    }).render('#paypal-button-container');
     document.getElementById('modalPago').classList.add('active');
     document.body.style.overflow = 'hidden';
-
-    // Inicializar Stripe al abrir por primera vez
-    setTimeout(initStripe, 50);
   }
 
   function cerrarPago() {
@@ -758,44 +739,52 @@
     document.body.style.overflow = '';
   }
 
-  async function procesarPago() {
-    const nombre = document.getElementById('pay-nombre').value.trim();
-    const email  = document.getElementById('pay-email').value.trim();
-    const errDiv = document.getElementById('card-errors');
-    const btn    = document.getElementById('btn-pagar');
-
-    if (!nombre) { errDiv.textContent = 'Por favor, introduce tu nombre.'; return; }
-    if (!email || !email.includes('@')) { errDiv.textContent = 'Introduce un email válido.'; return; }
-
-    btn.disabled = true;
-    btn.textContent = 'Procesando...';
-    errDiv.textContent = '';
-
-    /* En producción aquí llamarías a tu backend para crear un PaymentIntent.
-       Con claves de prueba mostramos el flujo completo simulado. */
-    const { paymentMethod, error } = await stripe.createPaymentMethod({
-      type: 'card',
-      card: cardElement,
-      billing_details: { name: nombre, email }
-    });
-
-    if (error) {
-      errDiv.textContent = error.message;
-      btn.disabled = false;
-      btn.textContent = 'Pagar ahora';
-    } else {
-      // Pago simulado exitoso (en producción confirmarías el PaymentIntent desde el servidor)
-      document.getElementById('modal-contenido').style.display = 'none';
-      document.getElementById('modal-ok').style.display = 'block';
-      setTimeout(cerrarPago, 4000);
-    }
-  }
-
-  // Cerrar modal al hacer clic fuera
   document.getElementById('modalPago').addEventListener('click', function(e) {
     if (e.target === this) cerrarPago();
   });
-</script>
 
+  function filtrar(linea) {
+    document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('activo'));
+    event.target.classList.add('activo');
+    document.querySelectorAll('.card').forEach(c => {
+      c.style.display = (linea === 'todos' || c.dataset.linea === linea) ? '' : 'none';
+    });
+    document.querySelectorAll('.linea-titulo').forEach(t => {
+      const id = t.id;
+      t.style.display = (linea === 'todos' || linea === id) ? '' : 'none';
+    });
+    document.querySelectorAll('.catalogo-seccion').forEach(s => {
+      s.style.display = (linea === 'todos' || s.dataset.linea === linea) ? '' : 'none';
+    });
+  }
+
+  function irContacto() {
+    document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function enviar() {
+    const nombre   = document.getElementById('ct-nombre').value.trim();
+    const contacto = document.getElementById('ct-contacto').value.trim();
+    const producto = document.getElementById('ct-producto').value;
+    const mensaje  = document.getElementById('ct-mensaje').value.trim();
+    if (!nombre || !contacto) { alert('Por favor, rellena tu nombre y datos de contacto.'); return; }
+    let texto = `Hola, soy *${nombre}*.\n`;
+    if (producto) texto += `Estoy interesado/a en: *${producto}*.\n`;
+    if (mensaje)  texto += `\n${mensaje}\n`;
+    texto += `\nContacto: ${contacto}`;
+    window.open(`https://wa.me/34672617360?text=${encodeURIComponent(texto)}`, '_blank');
+  }
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.card').forEach(el => {
+    el.style.opacity='0'; el.style.transform='translateY(18px)';
+    el.style.transition='opacity .5s ease, transform .5s ease';
+    obs.observe(el);
+  });
+</script>
 </body>
 </html>
