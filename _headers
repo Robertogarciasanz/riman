@@ -1,0 +1,25 @@
+# CSS y JS propios — caché 1 año (se invalida con cambio de nombre/hash)
+/styles.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes — caché 1 año
+/imagenes/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicon — caché 1 año
+/favicon.png
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML — sin caché para que siempre esté actualizado
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# llms.txt y robots.txt — caché corta
+/llms.txt
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://rimansalamanca.com/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/KIT-TOTAL-RIMAN-PRO.webp</image:loc>
+      <image:title>Kit Total RIMAN PRO</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/ICD-Moisture-Cleansing-Oil.webp</image:loc>
+      <image:title>ICD Moisture Cleansing Oil — Aceite limpiador 145 ml</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/ICD-Dermatology-First-Package.webp</image:loc>
+      <image:title>ICD Dermatology First Package — Booster 130 ml + Sérum 45 ml</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/ICD-Dermatology-Cream.webp</image:loc>
+      <image:title>ICD Dermatology Cream — Crema hidratante 50 ml</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/ICD-Calming-Balance-Gel.webp</image:loc>
+      <image:title>ICD Calming Balance Gel — Gel equilibrante 100 ml</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/ICD-Collagen-100-Melting-Mask.webp</image:loc>
+      <image:title>ICD Collagen 100 Melting Mask — Mascarilla colágeno puro</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/ICD-Two-Phase-Oil-Mist.webp</image:loc>
+      <image:title>ICD Two-Phase Oil Mist — Bruma bifásica 50 ml</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/ICD-Multi-Stick-Balm.webp</image:loc>
+      <image:title>ICD Multi Stick Balm — Bálsamo sólido 9 g</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/Sheer-Glow-BB.webp</image:loc>
+      <image:title>Sheer Glow BB Cream 30 g</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rimansalamanca.com/imagenes/Lote-completo-ICD-Dermatology.webp</image:loc>
+      <image:title>Lote completo ICD Dermatology</image:title>
+    </image:image>
+  </url>
+</urlset>
